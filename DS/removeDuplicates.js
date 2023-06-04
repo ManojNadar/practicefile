@@ -21,17 +21,17 @@
 
 // console.log(removeDuplicates(arr));
 
-let arr = ["scale", "happy", "strength", "peace", "happy", "happy"];
+// let arr = ["scale", "happy", "strength", "peace", "happy", "happy"];
 
-function removeDuplicate(arr) {
-  let unique = [];
-  let dup = arr.reduce((acc, num) => {
-    if (!unique.includes(num)) {
-      unique.push(num);
-      return acc;
-    }
-  });
-  return unique;
-}
+// function removeDuplicate(arr) {
+//   let unique = [];
+//   let dup = arr.reduce((acc, num) => {
+//     if (!unique.includes(num)) {
+//       unique.push(num);
+//       return acc;
+//     }
+//   });
+//   return unique;
+// }
 
-console.log(removeDuplicate(arr));
+// console.log(removeDuplicate(arr));
