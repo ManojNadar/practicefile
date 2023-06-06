@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubbling</title>
+
+    <style>
+      #parent {
+        width: 50%;
+        background-color: yellow;
+        padding: 25px;
+      }
+      #child {
+        width: 50%;
+        background-color: pink;
+        padding: 25px;
+      }
+      #grandChild {
+        width: 50%;
+        background-color: orange;
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      parent
+      <div id="child">
+        child
+        <div id="grandChild">grandChild</div>
+      </div>
+    </div>
+
+    <script>
+      let parent = document.getElementById("parent");
+      let child = document.getElementById("child");
+      let grandChild = document.getElementById("grandChild");
+
+      //   Event Bubbling
+
+      //   parent.addEventListener("click", function () {
+      //     alert("Parent Called");
+      //   });
+      //   child.addEventListener("click", function () {
+      //     alert("Child Called");
+      //     event.stopPropagation();
+      //   });
+      //   grandChild.addEventListener("click", function () {
+      //     alert("grandChild Called");
+      //     event.stopPropagation();
+      //   });
+
+      //   Event Capturing
+
+      parent.addEventListener(
+        "click",
+        function () {
+          alert("Parent Called");
+          event.stopPropagation();
+        },
+        true
+      );
+      child.addEventListener("click", function () {
+        alert("Child Called");
+        event.stopPropagation();
+      });
+      grandChild.addEventListener("click", function () {
+        alert("grandChild Called");
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
