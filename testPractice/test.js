@@ -51,35 +51,35 @@
 // sumThree(array, target);
 
 // find even number of given array
-
-// var array = [2, 4, 8, 10, 6, 3, 4, 79, 99, 55, 33];
 // var array2 = [8, 10, 6, 3, 4, 79, 99, 55, 33];
 
-// function findEvenNum(even) {
-//   let newEven = [];
-//   for (let i = 0; i < even.length; i++) {
-//     if (even[i] % 2 == 0) {
-//          console.log(newEven)
-//       newEven.push(even[i]);
+// var array = [2, 4, 8, 10, 6, 3, 4, 79, 99, 55, 33];
+
+// function findEvenNum(array) {
+// //   let newEven = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 == 0) {
+//     //   console.log(newEven);
+//     console.log(array[i])
+//       //   newEven.push(even[i]);
 //     }
 //   }
 //   //   console.log(newEven);
-//   return newEven.length;
+//   //   return newEven.length;
 // }
 
-// var e = findEvenNum(array2);
+// var e = findEvenNum(array);
 // console.log(e);
 
 // find odd number
 
 // var array = [2, 4, 8, 10, 6, 3, 4, 44, 79, 99, 55, 33];
-// // var array2 = [8, 10, 6, 3, 4, 79, 99, 55, 33];
 
 // function oddNum(odd) {
 //   let newOdd = [];
 //   for (let i = 0; i < odd.length; i++) {
 //     if (odd[i] % 2 != 0) {
-//       console.log(odd[i]);
+//       //   console.log(odd[i]);
 //       newOdd.push(odd[i]);
 //     }
 //   }
@@ -87,5 +87,4 @@
 //   return newOdd.length;
 // }
 
-// let o = oddNum(array);
-// console.log("length of odd num is =", o);
+// console.log(oddNum(array));
