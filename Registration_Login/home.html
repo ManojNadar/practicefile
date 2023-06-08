@@ -8,5 +8,15 @@
   </head>
   <body>
     Welcome To Home Page
+
+    <button id="logut_btn" onclick="logout(event)">Logout</button>
   </body>
+
+  <script>
+    function logout(event) {
+      event.preventDefault();
+      let btn = document.getElementById("logut_btn");
+      window.location.href = "./login.html";
+    }
+  </script>
 </html>

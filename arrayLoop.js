@@ -13,7 +13,7 @@ let arr = [2, 4, 8, 10, 12, 20];
 //************** */ METHOD 2 REDUCE() (HOF)
 
 // let val = arr.reduce((a, b) => {
-//   console.log(a, b);
+//   console.log(a + b);
 //   return a + b;
 // }, 5);     // here 5 is starting value it will include in that array (OPTIONAL)
 // console.log(val);

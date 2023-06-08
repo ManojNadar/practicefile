@@ -7,6 +7,14 @@
     <title>Login</title>
   </head>
   <body>
-    Login Page
+    <form onsubmit="loginForm(event)">
+      <label>Email</label> <br />
+      <input type="email" id="loginEmail" /> <br />
+      <label>Password</label> <br />
+      <input type="Password" id="loginPassword" /> <br />
+      <input type="submit" value="Login" />
+    </form>
+
+    <script src="./login.js"></script>
   </body>
 </html>
