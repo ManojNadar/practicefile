@@ -7,24 +7,26 @@ function loginForm(event) {
   if (loginEmail && loginPassword) {
     let loginData = JSON.parse(localStorage.getItem("userDetails"));
     let flag = false;
-    // let Current_User;
+    let currentUser;
 
     for (let i = 0; i < loginData.length; i++) {
       if (
         loginData[i].userEmail === loginEmail &&
-        loginData[i].userpassword === loginPassword
+        loginData[i].userPassword === loginPassword
       ) {
         flag = true;
-        // Current_User = loginData[i];
+        currentUser = loginData[i];
       }
     }
 
-    if (!flag) {
-      //   localStorage.setItem("userDetails", JSON.stringify(Current_User));
+    if (flag) {
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
       window.location.href = "./home.html";
       alert("logged in succesfull");
     } else {
       alert("sorry wrong details");
+      document.getElementById("loginEmail").value = "";
+      document.getElementById("loginPassword").value = "";
     }
   } else {
     alert("fill all the fields");

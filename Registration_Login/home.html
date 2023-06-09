@@ -6,17 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
   </head>
-  <body>
-    Welcome To Home Page
 
-    <button id="logut_btn" onclick="logout(event)">Logout</button>
-  </body>
-
-  <script>
-    function logout(event) {
-      event.preventDefault();
-      let btn = document.getElementById("logut_btn");
-      window.location.href = "./login.html";
+  <style>
+    body {
+      width: 100%;
     }
-  </script>
+    h3 {
+      background-color: yellow;
+      height: 50px;
+      padding: 100px;
+    }
+
+    span {
+      font-weight: bolder;
+      font-size: 3em;
+    }
+
+    button {
+      width: 50%;
+      height: 100px;
+    }
+  </style>
+
+  <script src="./home.js"></script>
+  <body>
+    <h3>Welcome <span id="displayUser"></span></h3>
+    <button id="logut_btn" onclick="logout(event)">Logout</button>
+
+    <script>
+      let displayUser = document.getElementById("displayUser");
+      let logInUser = JSON.parse(localStorage.getItem("currentUser"));
+      displayUser.innerHTML = logInUser.userName;
+    </script>
+  </body>
 </html>

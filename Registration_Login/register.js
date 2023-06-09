@@ -1,6 +1,7 @@
 function registerForm(event) {
-  event.preventDefault();
+  event.preventDefault(); // prevent auto submit
 
+  // accessing all value from the input
   let name = document.getElementById("userName").value;
   let email = document.getElementById("userEmail").value;
   let password = document.getElementById("userPassword").value;
@@ -9,6 +10,8 @@ function registerForm(event) {
   console.log(
     `Name = ${name}, Email = ${email}, Password = ${password}, Confirmpassword = ${cPassword}`
   );
+
+  // condition on the input validation
 
   if (name && email && password && cPassword) {
     if (password.length >= 8 && cPassword >= 8) {
