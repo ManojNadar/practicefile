@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product page</title>
+  </head>
+  <body>
+    <form onsubmit="addProduct(event)">
+      <label>ID</label> <br />
+      <input type="text" id="prod-id" /> <br />
+      <label>Product name</label> <br />
+      <input type="text" id="prod-name" /> <br />
+      <label>productPrice</label> <br />
+      <input type="text" id="prod-price" /> <br />
+      <input type="submit" value="add product" /> <br />
+    </form>
+
+    <script>
+      function addProduct(event) {
+        event.preventDefault();
+        let prodId = document.getElementById("prod-id").value;
+        let prodName = document.getElementById("prod-name").value;
+        let prodPrice = document.getElementById("prod-price").value;
+
+        let products = {
+          id: prodId,
+          name: prodName,
+          price: prodPrice,
+        };
+
+        var flag = false;
+        let prodData = JSON.parse(localStorage.getItem("products")) || [];
+
+        for (let i = 0; i < prodData.length; i++) {
+          if (prodData) {
+            flag = true;
+          }
+        }
+
+        if (!flag) {
+          prodData.push(products);
+          localStorage.setItem("products", JSON.stringify(prodData));
+          alert("product added");
+
+          document.getElementById("prod-id").value = "";
+          document.getElementById("prod-name").value = "";
+          document.getElementById("prod-price").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

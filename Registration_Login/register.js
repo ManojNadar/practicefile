@@ -21,7 +21,7 @@ function registerForm(event) {
 
         for (let i = 0; i < storeData.length; i++) {
           if (storeData[i].userEmail === email) {
-            flag = true;
+            flag = false;
           }
         }
         let dataobject = {

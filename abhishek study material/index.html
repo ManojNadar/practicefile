@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="register(event)">
+        <label>username</label><br/>
+        <input id="username" type="text" placeholder="Enter your username" /><br/><br/>
+        <label>Email</label><br/>
+        <input id="email" type="text" placeholder="Enter your Email" /><br/><br/>
+        <label>Password</label><br/>
+        <input id="password" type="text" placeholder="Enter your password" /><br/><br/>
+        <label>Confirm Password</label><br/>
+        <input id="confirmPassword" type="text" placeholder="Confirm your password" /><br/><br/>
+        <input type="submit" value="register" />
+    </form>
+
+    <!-- <button onclick="register(event)"></button> -->
+
+
+
+    <script>
+
+        function register(event){
+            event.preventDefault();
+
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let cpassword = document.getElementById("confirmPassword").value;
+
+
+            if(username && email && password && cpassword){
+                if(password.length >= 8 && cpassword.length >=8){
+                    if(password === cpassword){
+                        let ls = JSON.parse(localStorage.getItem("instagram_users")) || [];
+                        let flag = false;
+
+                        for(let i=0;i<ls.length;i++){
+                            if(email == ls.userEmail){
+                                flag=true;
+                            }
+                        }
+
+                        if(!flag){
+                            let userObject = {userName : username, userEmail : email, userPassword : password, userConfirmPassword : cpassword};
+                            ls.push(userObject);
+                            localStorage.setItem("instagram_users", JSON.stringify(ls));
+                            alert("Registration Successful.");
+                            document.getElementById("username").value = "";
+                            document.getElementById("email").value = "";
+                            document.getElementById("password").value = "";
+                            document.getElementById("cpassword").value = "";
+                        } else {
+                            alert("User is already registered.");
+                            window.location.href = `./login.html`;
+                        }
+
+                    } else {
+                        alert("Passwords do not match.");
+                    }
+                } else {
+                    alert("Password should be 8 or more characters.");
+                }
+            } else {
+                alert("All fields are mandatory.");
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
