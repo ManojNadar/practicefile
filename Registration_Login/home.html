@@ -31,12 +31,36 @@
   <script src="./home.js"></script>
   <body>
     <h3>Welcome <span id="displayUser"></span></h3>
-    <button id="logut_btn" onclick="logout(event)">Logout</button>
+    <!-- <button id="logut_btn" onclick="logout(event)">Logout</button> -->
+    <div id="fetchLogout"></div>
 
     <script>
-      let displayUser = document.getElementById("displayUser");
-      let logInUser = JSON.parse(localStorage.getItem("currentUser"));
-      displayUser.innerHTML = logInUser.userName;
+      window.onload = () => {
+        let test_currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (test_currentUser) {
+          let displayUser = document.getElementById("displayUser");
+          displayUser.innerHTML = test_currentUser.userName;
+          let logoutDiv = document.getElementById("fetchLogout");
+          let logoutButtonStructure = `<button onclick='logoutTest()'>Logout</button>`;
+          logoutDiv.innerHTML = logoutButtonStructure;
+        } else {
+          window.location.href = `./login.html`;
+          // console.log("test");
+          let logoutDiv = document.getElementById("fetchLogout");
+          let loginButtonStructure = `<button onclick='redirectLogin()'>Login</button>`;
+          logoutDiv.innerHTML = loginButtonStructure;
+        }
+      };
+
+      function logoutTest() {
+        localStorage.removeItem("currentUser");
+        window.location.reload();
+      }
+
+      function redirectLogin() {
+        window.location.href = `./login.html`;
+      }
     </script>
   </body>
 </html>
