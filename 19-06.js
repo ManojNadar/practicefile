@@ -20,14 +20,14 @@
 
 // var array = [1, 1, 1, 2, 2, 3, 4, 4, 5, 6];
 
-// let result = [];
-// for (let i = 0; i < array.length; ) {
-//   if (array[i] == array[i + 1]) {
-//     // console.log(array[i]);
-//     // result.push(array[i]);
-//     array.splice(1, 1);
-//   } else {
-//     i++;
-//   }
-// }
-// console.log(array);
+let result = [];
+for (let i = 0; i < array.length; ) {
+  if (array[i] == array[i + 1]) {
+    // console.log(array[i]);
+    // result.push(array[i]);
+    array.splice(1, 1);
+  } else {
+    i++;
+  }
+}
+console.log(array);
