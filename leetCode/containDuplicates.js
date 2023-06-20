@@ -1,4 +1,4 @@
-// var nums = [1, 14, 3, 5];
+var nums = [1, 4, 2, 3, 3, 5];
 
 // function containDup(nums) {
 //   let mySet = new Set(nums); // remove all duplicates
@@ -20,3 +20,22 @@
 // };
 
 // console.log(containsDuplicate(nums));
+
+//solution 3
+
+// function containDuplicate(nums) {
+//   let flag = false;
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = i + 1; j < nums.length; j++) {
+//       if (nums[i] === nums[j]) {
+//         flag = true;
+//         console.log(true);
+//       }
+//     }
+//   }
+//   if (!flag) {
+//     console.log(false);
+//   }
+// }
+
+// containDuplicate(nums);
