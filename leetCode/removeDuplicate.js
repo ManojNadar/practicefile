@@ -10,7 +10,7 @@ for (let i = 0; i < arr.length; ) {
   }
 }
 
-// console.log(arr);
+console.log(arr);
 
 // Remove Duplicates from Sorted Array II {MEDIUM}
 
