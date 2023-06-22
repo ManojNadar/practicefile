@@ -27,11 +27,12 @@
 
 // let redVal = [2, 6, 8, 4, 10, 9, 22, 74];
 
+// //accumulative,current calue
 // let reducingArr = redVal.reduce((acc, curr) => {
 //   //   return acc + curr;
 //   //   return acc;
 //   //   return curr;
-// }, 0);
+// }, 10);
 
 // console.log(reducingArr);
 
@@ -49,7 +50,6 @@
 //   .reduce((acc, curr) => {
 //     return acc + curr;
 //   });
-
 // console.log(newArr);
 
 // ***********************FOR EACH
@@ -61,7 +61,9 @@
 //   //   console.log(element);
 //   //   console.log(index);
 //   //   console.log(array);
+//   //   return element;
 // });
+// console.log(newArr);
 
 // *************** SORT METHOD
 
@@ -74,6 +76,7 @@
 // arr.sort((a, b) => {
 //   return a - b; // ascending
 // });
+
 // arr.sort((a, b) => {
 //   return b - a; //descending
 // });
@@ -84,20 +87,23 @@
 
 // let arr1 = [2, 5, 6, 8];
 // let arr2 = [10, 5, 3, 8];
-// #1
-// let arr3 = arr1.concat(arr2);
-// #2
-// let arr3 = [arr1,arr2];
-// #3
+// // #1
+// // let arr3 = arr1.concat(arr2);
+// // #2
+// // let arr3 = [arr1, arr2];
+// // #3
 // let arr3 = [...arr1, ...arr2];
 // console.log(arr3);
+
+// let newArr = arr1 + "," + arr2;
+// console.log(newArr);
 
 // ***********************EVERY METHOD
 
 // let arr = [2, 5, 6, 8, 7, 9];
 
 // let everyArr = arr.every((element) => {
-//   //   return element > 2;
+//   //   return element >= 2;
 //   //   return element < 2;
 // });
 
@@ -108,7 +114,7 @@
 // let arr = [2, 5, 6, 8, 7, 9];
 
 // let someArr = arr.some((element) => {
-//   return element < 3;
+//   //   return element < 1;
 // });
 // console.log(someArr);
 
@@ -124,21 +130,24 @@
 // let arr = [5, 8, 3, 6];
 // console.log(arr.join());
 // console.log(arr.join("-"));
+
+// let newArr = arr.join("-");
+// console.log(typeof newArr);
 // console.log(arr.join("+"));
 
 // ****************FIND METHOD
 
-// let arr = [5, 8, 6, 7, 9, 10, 20, 30, 54];
+// let arr = [5, 8, 6, 7, 9, 10, 20, 30, 54, 10];
 
 // let findArr = arr.find((element) => {
 //   //   return element < 10;
-//   return element > 30;
+//   return element === 10;
 // });
 // console.log(findArr);
 
 // ****************FINDINDEX METHOD
 
-// let arr = [5, 8, 6, 7, 9, 10, 20, 30, 54];
+// let arr = [5, 8, 6, 7, 9, 10, 20, 30, 54, 10];
 
 // let findIndex = arr.findIndex((element) => {
 //   return element === 10;
@@ -148,9 +157,10 @@
 
 // ***********************INDEXOF
 
-// let arr = [5, 8, 6, 7, 9, 10, 20, 30, 54];
+// let arr = [5, 8, 6, 7, 9, 10, 20, 30, 54, 12, 5, 6, 865, 4];
 
-// console.log(arr.indexOf(8));
+// console.log(arr.indexOf(30));
+// console.log(arr.length);
 // console.log(arr.indexOf(arr.length));
 
 // ***********************LASTINDEXOF
@@ -161,22 +171,24 @@
 
 // ***********************FILL
 
-// array.fill(value, start, end)
+// array.fill(value, start, end);
 
 // let arr = [10, 20, 30, 6, 54];
 
-// let newArr = arr.fill("25");
+// let newArr = arr.fill("hi");
 // console.log(arr);
 // arr.fill(30);
 // console.log(arr);
-// arr.fill(3, 2, 3);
+// arr.fill(3, 2, 5);
 // console.log(arr);
+
+// arr.fill()
 
 // ********************SLICE METHOD
 
 // let arr = [10, 20, 30, 6, 54];
 
-// console.log(arr.slice(1, 3)); starts from 1 and ends on 2
+// console.log(arr.slice(1, 3)); // starts from 1 and ends on 2
 
 // *********************REVERSE METHOD
 
@@ -192,6 +204,8 @@
 //   [1, 2, 3],
 //   [5, 4, 9],
 // ];
+
+// console.log(arr1);
 // let arr2 = [
 //   [1, 2, 3],
 //   [5, 4, 9],
@@ -201,6 +215,8 @@
 //   [3, 4, [99, 33]],
 // ];
 
+// console.log(arr2);
+
 // let arr3 = [
 //   [1, 2, 3],
 //   [5, 4, 9],
@@ -209,6 +225,7 @@
 //   [1, 4, 9],
 //   [3, 4, [99, 33]],
 // ];
+// console.log(arr3);
 
 // let newArr = arr1.flat();
 // let newArr = arr2.flat(2);
