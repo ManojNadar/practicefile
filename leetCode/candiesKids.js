@@ -1,4 +1,4 @@
-// Math.max method solution 1
+// // Math.max method solution 1
 
 // function kidsWithCandies() {
 //   let candies = [2, 3, 5, 1, 3];
@@ -20,7 +20,7 @@
 
 // console.log(kidsWithCandies());
 
-// // Math.max method solution 2
+// Math.max method solution 2
 
 // function kidsWithCandies() {
 //   let candies = [2, 3, 5, 1, 3];
@@ -28,9 +28,9 @@
 
 //   let maxCandies = Math.max(...candies);
 //   let allCandy = candies.map((candy) => {
-//       return candy + extraCandies >= maxCandies;
-//     });
-//     return allCandy;
+//     return candy + extraCandies >= maxCandies;
+//   });
+//   return allCandy;
 // }
 
 // console.log(kidsWithCandies());
@@ -38,6 +38,8 @@
 // let candies = [2, 3, 5, 1, 3];
 
 // console.log(Math.max(...candies));
+
+// *****which kids has more candies
 
 // function kidsWithCandies() {
 //   let candies = [2, 3, 5, 1, 3];
