@@ -244,3 +244,52 @@
 // });
 
 // console.log(newArr);
+
+//  ================ at Method
+
+// let atArr = [53, 1, 4];
+
+// console.log(atArr.at(2));
+
+// ********************ISARRAY
+
+// let arr = [1, 3];
+// console.log(Array.isArray(arr));
+// let str = "hi";
+// console.log(Array.isArray(str));
+
+// ********************JOIN
+
+// let arr = ["hello", "welcome"];
+// console.log(arr.join());
+// console.log(arr.join("-"));
+
+// ****************REVERSE
+// console.log(arr.reverse());
+
+// ***********KEYS
+
+// let iteration = arr.keys();
+
+// for (let key of iteration) {
+//   console.log(key);
+// }
+
+// ************ArrayoF
+
+// console.log(Array.of("hello", "hi", "welcome", "greeting"));
+
+// *****************REDUCERIGHT
+
+// const array1 = [
+//   [0, 1],
+//   [2, 3],
+//   [4, 5],
+// ];
+
+// const result = array1.reduceRight((accumulator, currentValue) =>
+//   accumulator.concat(currentValue)
+// );
+
+// console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
