@@ -17,6 +17,7 @@
 // no same numbers should be more than 2
 
 // var arr2 = [1, 1, 1, 1, 2, 2, 2, 2, 3];
+
 // for (let i = 0; i < arr2.length; ) {
 //   if (arr2[i] === arr2[i + 1] && arr2[i] === arr2[i + 2]) {
 //     arr2.splice(i + 1, 1);

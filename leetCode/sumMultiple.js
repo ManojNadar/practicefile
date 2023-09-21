@@ -1,4 +1,4 @@
-let n = 10;
+let n = 7;
 
 var sumOfMultiples = function (n) {
   let res = 0;

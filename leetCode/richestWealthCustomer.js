@@ -16,10 +16,11 @@ function rich() {
   }
 
   //   return richest;
+  // console.log(richest);
   return Math.max(...richest);
 }
 
-// console.log(rich());
+console.log(rich());
 
 // let newArr = [5, 8, 7];
 // console.log(Math.max(...newArr));
