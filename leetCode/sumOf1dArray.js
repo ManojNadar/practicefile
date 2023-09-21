@@ -1,17 +1,17 @@
-// let nums = [1, 2, 3, 4];
+let nums = [1, 2, 3, 4];
 
-// let newArr = [];
+let newArr = [];
 
-// let sum = 0;
+let sum = 0;
 
-// for (let i = 0; i < nums.length; i++) {
-//   // newArr.push((nums[i] += nums[i + 1]));
+for (let i = 0; i < nums.length; i++) {
+  // newArr.push((nums[i] += nums[i + 1]));
 
-//   (sum += nums[i]) + nums[i + 1];
-//   newArr.push(sum);
-// }
+  (sum += nums[i]) + nums[i + 1];
+  newArr.push(sum);
+}
 
-// console.log(newArr);
+console.log(newArr);
 
 //solution 2 function based
 

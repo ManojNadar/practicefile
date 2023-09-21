@@ -4,10 +4,10 @@ let nums = [1, 2, 1];
 
 // solution 1
 
-// function concatArr(nums) {
-//   return [...nums, ...nums];
-// }
-// console.log(concatArr(nums));
+function concatArr(nums) {
+  return [...nums, ...nums];
+}
+console.log(concatArr(nums));
 
 // solution 2
 

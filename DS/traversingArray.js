@@ -42,10 +42,10 @@ var arr = [235, 234, 212, 35, 35, 52, 23, 324, 52, 3, 5535, 35, 32, 34];
 
 // print array[elements] index
 
-// function traversing(arr) {
-//   for (item in arr) {
-//     console.log(item);
-//   }
-// }
+function traversing(arr) {
+  for (item in arr) {
+    console.log(item);
+  }
+}
 
-// traversing(arr);
+traversing(arr);

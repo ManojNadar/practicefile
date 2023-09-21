@@ -48,6 +48,6 @@ data.set("Graduate", true);
 // }
 
 // BOTH KEYS AND VALUES in SEPERATE ARRAYS
-// for (item of data.entries()) {
-//   console.log(item);
-// }
+for (item of data.entries()) {
+  console.log(item);
+}
