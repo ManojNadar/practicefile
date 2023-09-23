@@ -37,5 +37,5 @@ function kidsWithCandies() {
 
 console.log(kidsWithCandies());
 
-let candies = [2, 3, 5, 1, 3];
-console.log(Math.max(...candies));
+// let candies = [2, 3, 5, 1, 3];
+// console.log(Math.max(...candies));

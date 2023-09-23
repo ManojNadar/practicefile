@@ -5,9 +5,7 @@ let newArr = [];
 let sum = 0;
 
 for (let i = 0; i < nums.length; i++) {
-  // newArr.push((nums[i] += nums[i + 1]));
-
-  (sum += nums[i]) + nums[i + 1];
+  sum += nums[i];
   newArr.push(sum);
 }
 

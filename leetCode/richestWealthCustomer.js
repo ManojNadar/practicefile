@@ -10,6 +10,7 @@ function rich() {
 
   for (let i = 0; i < accounts.length; i++) {
     let findRich = accounts[i].reduce((acc, curr) => {
+      // console.log(acc, "acc");
       return acc + curr;
     }, 0);
     richest.push(findRich);

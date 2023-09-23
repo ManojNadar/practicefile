@@ -1,5 +1,5 @@
-// let nums = [1, 2, 3, 1, 1, 3];
-let nums = [1, 2, 3];
+let nums = [1, 2, 3, 1, 1, 3];
+// let nums = [1, 2, 3];
 // let nums2 = [1, 1, 1, 1];
 
 let result = [];
