@@ -13,7 +13,13 @@ function isPrime(n) {
   return true;
 }
 
-console.log(isPrime(13));
+let num = 100;
+
+for (let i = 0; i <= num; i++) {
+  if (isPrime(i)) {
+    console.log(i);
+  }
+}
 
 // Big-O = O(n) - linear
 // as the n value increases the loop increases
